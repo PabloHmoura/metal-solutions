@@ -1,15 +1,15 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Metal Solutions - Soluções em Soldagem Industrial</title>
+    <title>Metal Solutions & Welding - Precision Machining and Welding Excellence</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         :root {
             --primary: #000000;
-            --secondary: #FFD700;
-            --accent: #FFED4E;
+            --secondary: #ff9900;
+            --accent: #ffa44e;
             --light: #FFFFFF;
             --dark: #1A1A1A;
             --gray: #F5F5F5;
@@ -435,6 +435,36 @@
             width: 100%;
         }
         
+        .contact-options {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .contact-option {
+            flex: 1;
+            text-align: center;
+            padding: 15px;
+            background-color: #333;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .contact-option:hover {
+            background-color: #444;
+        }
+        
+        .contact-option.active {
+            background-color: var(--secondary);
+            color: var(--primary);
+        }
+        
+        .contact-option i {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        
         /* WhatsApp Button */
         .whatsapp-float {
             position: fixed;
@@ -457,6 +487,31 @@
         
         .whatsapp-float:hover {
             background-color: #128C7E;
+            transform: scale(1.1);
+        }
+        
+        /* SMS Button */
+        .sms-float {
+            position: fixed;
+            bottom: 100px;
+            right: 30px;
+            background-color: #34B7F1;
+            color: var(--light);
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 24px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+            transition: all 0.3s;
+            text-decoration: none;
+        }
+        
+        .sms-float:hover {
+            background-color: #1E9BD0;
             transform: scale(1.1);
         }
         
@@ -587,6 +642,10 @@
             .hero p {
                 font-size: 18px;
             }
+            
+            .contact-options {
+                flex-direction: column;
+            }
         }
     </style>
 </head>
@@ -596,19 +655,19 @@
         <div class="container header-container">
             <div class="logo">
                 <i class="fas fa-wrench"></i>
-                <h1>Metal<span style="color: var(--secondary);">Solutions</span></h1>
+                <h1>Metal<span style="color: var(--secondary);">Solutions</span> & Welding</h1>
             </div>
             <div class="mobile-menu">
                 <i class="fas fa-bars"></i>
             </div>
             <nav>
                 <ul>
-                    <li><a href="#home">Início</a></li>
-                    <li><a href="#services">Serviços</a></li>
-                    <li><a href="#about">Sobre Nós</a></li>
-                    <li><a href="#projects">Projetos</a></li>
-                    <li><a href="#testimonials">Depoimentos</a></li>
-                    <li><a href="#contact">Contato</a></li>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#testimonials">Testimonials</a></li>
+                    <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
         </div>
@@ -617,9 +676,9 @@
     <!-- Hero Section -->
     <section class="hero" id="home">
         <div class="container">
-            <h2>Soluções Profissionais em Soldagem</h2>
-            <p>Oferecemos serviços de solda de alta qualidade para indústrias, construção civil e projetos personalizados. Mais de 15 anos de experiência no mercado.</p>
-            <a href="#contact" class="btn">Solicitar Orçamento</a>
+            <h2>Precision Machining and Welding Excellence</h2>
+            <p>We combine experience, technology and commitment to deliver complete solutions in machining and welding, serving from small repairs to complex structural projects.</p>
+            <a href="#contact" class="btn">Request Quote</a>
         </div>
     </section>
 
@@ -627,16 +686,16 @@
     <section class="services" id="services">
         <div class="container">
             <div class="section-title">
-                <h2>Nossos Serviços</h2>
+                <h2>Our Services</h2>
             </div>
             <div class="services-grid">
                 <div class="service-card">
                     <div class="service-icon">
-                        <i class="fas fa-industry"></i>
+                        <i class="fas fa-cogs"></i>
                     </div>
                     <div class="service-content">
-                        <h3>Solda Industrial</h3>
-                        <p>Serviços especializados em solda industrial para máquinas, equipamentos e estruturas metálicas de grande porte.</p>
+                        <h3>High Performance Machining</h3>
+                        <p>Machining of metal parts with precision and professional finish in steel, aluminum and other materials. Manufacturing and adjustment of mechanical components, repair of damaged parts and production of custom parts.</p>
                     </div>
                 </div>
                 <div class="service-card">
@@ -644,8 +703,44 @@
                         <i class="fas fa-tools"></i>
                     </div>
                     <div class="service-content">
-                        <h3>Manutenção e Reparo</h3>
-                        <p>Manutenção corretiva e preventiva em equipamentos, máquinas e estruturas metálicas com problemas de solda.</p>
+                        <h3>Lathe and Milling Machine Machining</h3>
+                        <p>Specialized services in mechanical lathe and milling machine for production of parts with excellent performance, alignment and dimensional tolerance within professional standards.</p>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-fire"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>Aluminum Welding</h3>
+                        <p>Specialists in aluminum welding with advanced techniques to ensure strength and impeccable finish in various types of projects and applications.</p>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>Stainless Steel Welding</h3>
+                        <p>Specialized services in stainless steel welding for applications that require corrosion resistance and high quality aesthetic finish.</p>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-hard-hat"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>Carbon Steel Welding</h3>
+                        <p>High strength welding in carbon steel for structures, equipment and components that require durability and performance in demanding conditions.</p>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-toolbox"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>TIG and MIG Welding</h3>
+                        <p>Execution of TIG and MIG welding for various materials and applications, ensuring precision, cleanliness and high strength in welded joints.</p>
                     </div>
                 </div>
                 <div class="service-card">
@@ -653,17 +748,17 @@
                         <i class="fas fa-hammer"></i>
                     </div>
                     <div class="service-content">
-                        <h3>Fabricação de Estruturas</h3>
-                        <p>Fabricação de estruturas metálicas personalizadas para diversos setores industriais e comerciais.</p>
+                        <h3>Structural Repair and Reinforcement</h3>
+                        <p>Specialized services in repair and reinforcement of metal structures, industrial equipment and mechanical components with welding problems or wear.</p>
                     </div>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">
-                        <i class="fas fa-home"></i>
+                        <i class="fas fa-redo"></i>
                     </div>
                     <div class="service-content">
-                        <h3>Solda para Construção Civil</h3>
-                        <p>Serviços de solda especializados para obras civis, incluindo estruturas, grades, portões e muito mais.</p>
+                        <h3>Parts Recovery</h3>
+                        <p>Recovery of worn or damaged parts and components through advanced welding and machining techniques, extending their useful life.</p>
                     </div>
                 </div>
                 <div class="service-card">
@@ -671,17 +766,17 @@
                         <i class="fas fa-truck"></i>
                     </div>
                     <div class="service-content">
-                        <h3>Serviços Móveis</h3>
-                        <p>Equipe móvel para atendimento in loco em empresas, obras e residências em toda a região.</p>
+                        <h3>Trailer and Cargo Box Welding</h3>
+                        <p>Specialized welding services for trailers, cargo boxes and transport equipment, ensuring safety and durability in road applications.</p>
                     </div>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">
-                        <i class="fas fa-clipboard-check"></i>
+                        <i class="fas fa-industry"></i>
                     </div>
                     <div class="service-content">
-                        <h3>Consultoria Técnica</h3>
-                        <p>Consultoria especializada em processos de soldagem, seleção de materiais e soluções técnicas.</p>
+                        <h3>Custom Fabrication</h3>
+                        <p>Custom fabrication of parts, components and metal structures according to project or specific customer needs.</p>
                     </div>
                 </div>
             </div>
@@ -693,30 +788,34 @@
         <div class="container">
             <div class="about-container">
                 <div class="about-content">
-                    <h2>15 Anos de Experiência em Soldagem</h2>
-                    <p>A Metal Solutions é uma empresa especializada em serviços de soldagem de alta qualidade, atendendo indústrias, construtoras e clientes particulares. Nossa equipe é formada por soldadores certificados com ampla experiência em diversos processos de solda.</p>
-                    <p>Utilizamos equipamentos de última geração e materiais de primeira linha para garantir a qualidade e durabilidade de todos os nossos serviços.</p>
+                    <h2>Precision Machining and Welding Excellence</h2>
+                    <p>Metal Solutions & Welding is a company specialized in complete solutions in machining and welding, serving from small repairs to complex structural projects. Our goal is to ensure quality, precision and durability in every stage of the service.</p>
+                    <p>We combine experience, technology and commitment to deliver results that exceed expectations, always with responsibility and attention to detail.</p>
                     <div class="features">
                         <div class="feature">
                             <i class="fas fa-check-circle"></i>
-                            <span>Soldadores certificados e experientes</span>
+                            <span>Certified and experienced technicians</span>
                         </div>
                         <div class="feature">
                             <i class="fas fa-check-circle"></i>
-                            <span>Equipamentos de última geração</span>
+                            <span>State-of-the-art equipment</span>
                         </div>
                         <div class="feature">
                             <i class="fas fa-check-circle"></i>
-                            <span>Atendimento rápido e eficiente</span>
+                            <span>High durability materials</span>
                         </div>
                         <div class="feature">
                             <i class="fas fa-check-circle"></i>
-                            <span>Garantia em todos os serviços</span>
+                            <span>Warranty on all services</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Delivery within agreed deadline</span>
                         </div>
                     </div>
                 </div>
                 <div class="about-image">
-                    <img src="https://mjrmetalurgica.com.br/wp-content/uploads/2023/12/metalurgica1.jpg" alt="Soldador profissional trabalhando">
+                    <img src="https://mjrmetalurgica.com.br/wp-content/uploads/2023/12/metalurgica1.jpg" alt="Professional welder working">
                 </div>
             </div>
         </div>
@@ -726,34 +825,43 @@
     <section class="projects" id="projects">
         <div class="container">
             <div class="section-title">
-                <h2>Nossos Projetos</h2>
+                <h2>Our Projects</h2>
             </div>
             <div class="projects-grid">
                 <div class="project-card">
                     <div class="project-image">
-                        <img src="https://www.ferusi.com.br/blog/doutor/uploads/0/blog/2025/04/blog-empresas-de-soldagem-industrial-solucoes-em-estruturas-metalicas-9d14fbedd0.png" alt="Projeto de solda industrial">
+                        <img src="images/Primeira imagem.jpg" alt="High performance machining">
                     </div>
                     <div class="project-content">
-                        <h3>Estrutura Industrial</h3>
-                        <p>Fabricação e montagem de estrutura metálica para galpão industrial de 800m².</p>
+                        <h3>High Performance Machining</h3>
+                        <p>We perform machining of metal parts with precision and professional finish. We work with steel, aluminum and other materials, ensuring:</p>
+                        <p>Manufacturing and adjustment of mechanical components</p>
+                        <p>Repair of damaged parts</p>
+                        <p>Machining in mechanical lathe and milling machine</p>
+                        <p>Production of custom parts according to project or customer needs</p>
                     </div>
                 </div>
                 <div class="project-card">
                     <div class="project-image">
-                        <img src="https://www.verzani.com.br/wp-content/uploads/2020/12/manuten%C3%A7%C3%A3o-corretiva-scaled.jpeg" alt="Projeto de solda em equipamento">
+                        <img src="images/solda especializada.jpg" alt="Specialized Welding">
                     </div>
                     <div class="project-content">
-                        <h3>Manutenção de Equipamento</h3>
-                        <p>Reparo e reforço em equipamento industrial com mais de 10 toneladas.</p>
+                        <h3>Specialized Welding</h3>
+                        <p>We are specialists in welding of: Aluminum, Stainless steel, Carbon steel. We offer safe, resistant services with professional finish for various sectors.</p>
                     </div>
                 </div>
                 <div class="project-card">
                     <div class="project-image">
-                        <img src="https://blog.obramax.com.br/wp-content/uploads/2024/07/fundacao.jpeg" alt="Projeto de solda em construção civil">
+                        <img src="images/Caliper_imagem 2.webp" alt="Commitment to quality">
                     </div>
                     <div class="project-content">
-                        <h3>Estrutura para Edifício</h3>
-                        <p>Fabricação e instalação de estrutura metálica para edifício comercial de 5 andares.</p>
+                        <h3>Commitment to quality</h3>
+                        <p>Metal Solutions & Welding works with rigorous quality standards, always seeking:</p> 
+                            <p>Fast and transparent service</p> 
+                            <p>Customized solutions for each project </p>
+                            <p>High durability materials</p> 
+                            <p>Safety in all stages</p> 
+                            <p>Delivery within agreed deadline</p>
                     </div>
                 </div>
             </div>
@@ -764,30 +872,30 @@
     <section class="testimonials" id="testimonials">
         <div class="container">
             <div class="section-title">
-                <h2>Depoimentos de Clientes</h2>
+                <h2>Customer Testimonials</h2>
             </div>
             <div class="testimonials-container">
                 <div class="testimonial">
-                    <p>Contratei a Metal Solutions para um reparo urgente em nossa linha de produção. O serviço foi realizado com excelência, dentro do prazo e com qualidade superior. Recomendo!</p>
+                    <p>I hired Metal Solutions & Welding for an urgent repair in our production line. The service was performed with excellence, on time and with superior quality. I recommend!</p>
                     <div class="client">
                         <div class="client-image">
-                            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Cliente">
+                            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Client">
                         </div>
                         <div class="client-info">
                             <h4>Carlos Silva</h4>
-                            <p>Gerente Industrial - Metalúrgica ABC</p>
+                            <p>Industrial Manager - ABC Metallurgy</p>
                         </div>
                     </div>
                 </div>
                 <div class="testimonial">
-                    <p>Excelente trabalho na fabricação da estrutura metálica do nosso novo galpão. Profissionais qualificados, equipamentos modernos e um resultado final impecável.</p>
+                    <p>Excellent work in the fabrication of the metal structure of our new warehouse. Qualified professionals, modern equipment and an impeccable final result.</p>
                     <div class="client">
                         <div class="client-image">
-                            <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Cliente">
+                            <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Client">
                         </div>
                         <div class="client-info">
                             <h4>Mariana Oliveira</h4>
-                            <p>Diretora - Construtora Progresso</p>
+                            <p>Director - Progress Construction</p>
                         </div>
                     </div>
                 </div>
@@ -800,12 +908,12 @@
         <div class="container">
             <div class="contact-container">
                 <div class="contact-info">
-                    <h2>Entre em Contato</h2>
-                    <p>Tem um projeto em mente? Precisa de serviços de solda? Entre em contato conosco para um orçamento sem compromisso.</p>
+                    <h2>Contact Us</h2>
+                    <p>Have a project in mind? Need machining or welding services? Contact us for a no-obligation quote.</p>
                     <div class="contact-details">
                         <div class="contact-item">
                             <i class="fas fa-map-marker-alt"></i>
-                            <span>43 nickerson rd, Ashland, Massachusetts 01721</span>
+                            <span>43 Nickerson Rd, Ashland, Massachusetts 01721</span>
                         </div>
                         <div class="contact-item">
                             <i class="fas fa-phone"></i>
@@ -813,45 +921,61 @@
                         </div>
                         <div class="contact-item">
                             <i class="fas fa-envelope"></i>
-                            <span>contato@metalsolutions.com.br</span>
+                            <span>contact@metalsolutions.com</span>
                         </div>
                         <div class="contact-item">
                             <i class="fas fa-clock"></i>
-                            <span>Segunda a Sexta: 8h às 18h | Sábado: 8h às 12h</span>
+                            <span>Monday to Friday: 8am to 6pm | Saturday: 8am to 12pm</span>
                         </div>
                     </div>
                 </div>
                 <div class="contact-form">
                     <form id="contactForm">
                         <div class="form-group">
-                            <label for="name">Nome</label>
+                            <label for="name">Name</label>
                             <input type="text" id="name" class="form-control" required>
                         </div>
                         <div class="form-group">
-                            <label for="email">E-mail</label>
+                            <label for="email">Email</label>
                             <input type="email" id="email" class="form-control" required>
                         </div>
                         <div class="form-group">
-                            <label for="phone">Telefone</label>
+                            <label for="phone">Phone</label>
                             <input type="tel" id="phone" class="form-control" required>
                         </div>
                         <div class="form-group">
-                            <label for="service">Serviço de Interesse</label>
+                            <label for="service">Service of Interest</label>
                             <select id="service" class="form-control" required>
-                                <option value="">Selecione um serviço</option>
-                                <option value="solda-industrial">Solda Industrial</option>
-                                <option value="manutencao-reparo">Manutenção e Reparo</option>
-                                <option value="fabricacao-estruturas">Fabricação de Estruturas</option>
-                                <option value="solda-construcao">Solda para Construção Civil</option>
-                                <option value="servicos-moveis">Serviços Móveis</option>
-                                <option value="consultoria">Consultoria Técnica</option>
+                                <option value="">Select a service</option>
+                                <option value="usinagem-alta-performance">High Performance Machining</option>
+                                <option value="usinagem-torno-fresadora">Lathe and Milling Machine Machining</option>
+                                <option value="solda-aluminio">Aluminum Welding</option>
+                                <option value="solda-aco-inox">Stainless Steel Welding</option>
+                                <option value="solda-aco-carbono">Carbon Steel Welding</option>
+                                <option value="solda-tig-mig">TIG and MIG Welding</option>
+                                <option value="reparo-estrutural">Structural Repair and Reinforcement</option>
+                                <option value="recuperacao-pecas">Parts Recovery</option>
+                                <option value="solda-carretas">Trailer and Cargo Box Welding</option>
+                                <option value="fabricacao-personalizada">Custom Fabrication</option>
                             </select>
                         </div>
                         <div class="form-group">
-                            <label for="message">Mensagem</label>
+                            <label for="message">Message</label>
                             <textarea id="message" class="form-control" required></textarea>
                         </div>
-                        <button type="submit" class="btn btn-block">Enviar Mensagem</button>
+                        
+                        <div class="contact-options">
+                            <div class="contact-option active" id="whatsappOption">
+                                <i class="fab fa-whatsapp"></i>
+                                <span>WhatsApp</span>
+                            </div>
+                            <div class="contact-option" id="smsOption">
+                                <i class="fas fa-sms"></i>
+                                <span>SMS</span>
+                            </div>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-block">Send Message</button>
                     </form>
                 </div>
             </div>
@@ -859,8 +983,13 @@
     </section>
 
     <!-- WhatsApp Button -->
-    <a href="https://wa.me/5511941463170?text=Olá! Gostaria de solicitar um orçamento para serviços de solda." class="whatsapp-float" target="_blank">
+    <a href="https://wa.me/19785687690?text=Hello! I would like to request a quote for machining or welding services." class="whatsapp-float" target="_blank">
         <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- SMS Button -->
+    <a href="sms:+19785687690?body=Hello! I would like to request a quote for machining or welding services." class="sms-float" target="_blank">
+        <i class="fas fa-sms"></i>
     </a>
 
     <!-- Footer -->
@@ -868,8 +997,8 @@
         <div class="container">
             <div class="footer-container">
                 <div class="footer-col">
-                    <h3>Metal Solutions</h3>
-                    <p>Especialistas em serviços de soldagem de alta qualidade para indústrias, construção civil e projetos personalizados.</p>
+                    <h3>Metal Solutions & Welding</h3>
+                    <p>Specialists in high performance machining and specialized welding for industries, construction and custom projects.</p>
                     <div class="social-links">
                         <a href="#"><i class="fab fa-facebook-f"></i></a>
                         <a href="https://www.instagram.com/metal.solutions26/"><i class="fab fa-instagram"></i></a>
@@ -878,44 +1007,54 @@
                     </div>
                 </div>
                 <div class="footer-col">
-                    <h3>Serviços</h3>
+                    <h3>Services</h3>
                     <ul>
-                        <li><a href="#">Solda Industrial</a></li>
-                        <li><a href="#">Manutenção e Reparo</a></li>
-                        <li><a href="#">Fabrição de Estruturas</a></li>
-                        <li><a href="#">Solda para Construção Civil</a></li>
-                        <li><a href="#">Serviços Móveis</a></li>
-                        <li><a href="#">Consultoria Técnica</a></li>
+                        <li><a href="#">High Performance Machining</a></li>
+                        <li><a href="#">Lathe and Milling Machine Machining</a></li>
+                        <li><a href="#">Aluminum Welding</a></li>
+                        <li><a href="#">Stainless Steel Welding</a></li>
+                        <li><a href="#">Carbon Steel Welding</a></li>
+                        <li><a href="#">TIG and MIG Welding</a></li>
+                        <li><a href="#">Structural Repair and Reinforcement</a></li>
+                        <li><a href="#">Parts Recovery</a></li>
+                        <li><a href="#">Trailer and Cargo Box Welding</a></li>
+                        <li><a href="#">Custom Fabrication</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
-                    <h3>Links Rápidos</h3>
+                    <h3>Quick Links</h3>
                     <ul>
-                        <li><a href="#home">Início</a></li>
-                        <li><a href="#services">Serviços</a></li>
-                        <li><a href="#about">Sobre Nós</a></li>
-                        <li><a href="#projects">Projetos</a></li>
-                        <li><a href="#testimonials">Depoimentos</a></li>
-                        <li><a href="#contact">Contato</a></li>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#testimonials">Testimonials</a></li>
+                        <li><a href="#contact">Contact</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
-                    <h3>Contato</h3>
+                    <h3>Contact</h3>
                     <ul>
-                        <li><i class="fas fa-map-marker-alt"></i> 43 nickerson rd, Ashland, Massachusetts 01721</li>
+                        <li><i class="fas fa-map-marker-alt"></i> 43 Nickerson Rd, Ashland, Massachusetts 01721</li>
                         <li><i class="fas fa-phone"></i> +1 (978) 568-7690</li>
-                        <li><i class="fas fa-envelope"></i> contato@metalsolutions.com.br</li>
-                        <li><i class="fas fa-clock"></i> Seg-Sex: 8h-18h | Sáb: 8h-12h</li>
+                        <li><i class="fas fa-envelope"></i> contact@metalsolutions.com</li>
+                        <li><i class="fas fa-clock"></i> Mon-Fri: 8am-6pm | Sat: 8am-12pm</li>
                     </ul>
                 </div>
             </div>
             <div class="copyright">
-                <p>&copy; 2023 Metal Solutions - Todos os direitos reservados</p>
+                <p>&copy; 2023 Metal Solutions & Welding - All rights reserved</p>
             </div>
         </div>
     </footer>
 
     <script>
+
+        document.addEventListener('DOMContentLoaded', function() {
+            document.getElementById('whatsappOption').classList.add('active');
+            document.getElementById('smsOption').classList.remove('active');
+            selectedOption = 'whatsapp';
+        });     
         // Mobile Menu Toggle
         document.querySelector('.mobile-menu').addEventListener('click', function() {
             document.querySelector('nav').classList.toggle('active');
@@ -926,6 +1065,23 @@
             link.addEventListener('click', function() {
                 document.querySelector('nav').classList.remove('active');
             });
+        });
+
+        // Contact Option Selection
+        const whatsappOption = document.getElementById('whatsappOption');
+        const smsOption = document.getElementById('smsOption');
+        let selectedOption = 'whatsapp';
+
+        whatsappOption.addEventListener('click', function() {
+            whatsappOption.classList.add('active');
+            smsOption.classList.remove('active');
+            selectedOption = 'whatsapp';
+        });
+
+        smsOption.addEventListener('click', function() {
+            smsOption.classList.add('active');
+            whatsappOption.classList.remove('active');
+            selectedOption = 'sms';
         });
 
         // Form Submission
@@ -939,25 +1095,29 @@
             const service = document.getElementById('service').value;
             const message = document.getElementById('message').value;
             
-            // Create WhatsApp message
-            const whatsappMessage = `Olá! Meu nome é ${name}. Gostaria de solicitar um orçamento para: ${service}. 
+            // Create message
+            const contactMessage = `Hello! My name is ${name}. I would like to request a quote for: ${service}. 
             
-Detalhes:
-- E-mail: ${email}
-- Telefone: ${phone}
-- Mensagem: ${message}`;
+Details:
+- Email: ${email}
+- Phone: ${phone}
+- Message: ${message}`;
             
             // Encode message for URL
-            const encodedMessage = encodeURIComponent(whatsappMessage);
+            const encodedMessage = encodeURIComponent(contactMessage);
             
-            // Redirect to WhatsApp
-            window.open(`https://wa.me/5511941463170?text=${encodedMessage}`, '_blank');
+            // Redirect based on selected option
+            if (selectedOption === 'whatsapp') {
+                window.open(`https://wa.me/19785687690?text=${encodedMessage}`, '_blank');
+            } else {
+                window.open(`sms:+19785687690?body=${encodedMessage}`, '_blank');
+            }
             
             // Reset form
             document.getElementById('contactForm').reset();
             
-            // Show success message (you could replace this with a more sophisticated notification)
-            alert('Mensagem enviada com sucesso! Você será redirecionado para o WhatsApp.');
+            // Show success message
+            alert('Message sent successfully! You will be redirected to the selected application.');
         });
     </script>
 </body>
